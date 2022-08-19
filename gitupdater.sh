@@ -46,3 +46,7 @@ do if [[ $(grep $social $file) != ""  ]];
 done
 
 git push origin main;
+echo ""
+echo "SUCCESS!!"
+echo "All Files were submitted to the repository online"
+echo ""
