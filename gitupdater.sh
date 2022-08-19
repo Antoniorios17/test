@@ -30,6 +30,7 @@ social='[0-9]\{3\}-\{0,1\}[0-9]\{2\}-\{0,1\}[0-9]\{4\}'
 for file in * ;
 do if [[ $(grep $social $file) != ""  ]]; 
 	then 
+	echo ""
 	echo "************************"
 	echo "*                      *"	
 	echo "*        WARNING       *"
@@ -38,6 +39,8 @@ do if [[ $(grep $social $file) != ""  ]];
 	echo ""
 	echo "$file has sensitive data" 
 	echo "Please remove all sensitive data from $file"
+	echo "Cannot push files to the online repository"
+	echo ""
 	exit 1
 	fi;
 done
