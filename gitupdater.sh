@@ -8,20 +8,25 @@ echo "";
 echo "1) Update all files";
 echo "2) Update a specific file";
 echo "";
-read -p "--->" answer;
+read -p "---> " answer;
+
 
 case $answer in
-	1) git add --all;;
+	1) git add --all ;;
 	2) echo "Please enter the file name with the extension"
-		read -p ">>>  " file
+		read -p "--->  " file
 		git add "$file"
 		;;
-	*) echo "Invalid answer" 
+	*) echo "Invalid answer " && exit 
 		;; 
 esac
 
-echo "Please add the your commit message"
-read -p ">>>" message;
-
-
+echo "Please add the your commit message";
+read -p "--->" message;
 git commit -m "$message";
+
+
+
+
+
+
